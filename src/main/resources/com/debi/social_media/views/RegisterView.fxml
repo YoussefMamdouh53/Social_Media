@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="15.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debi.social_media.controllers.RegisterController">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      <Label text="Create Account">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label text="Fill in your details" textFill="#666666">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" />
+      <VBox spacing="5.0">
+         <children>
+            <Label text="Username">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtUser" stylesheets="@../styles.css" />
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label text="Email">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtEmail" stylesheets="@../styles.css" />
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label text="Password">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="txtPass" stylesheets="@../styles.css" />
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label text="Confirm Password">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="txtPassConfirm" stylesheets="@../styles.css" />
+         </children>
+      </VBox>
+      <GridPane hgap="10.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="78.0" prefWidth="119.0" spacing="5.0">
+               <children>
+                  <Label text="Country">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="txtCountry" maxWidth="1.7976931348623157E308" stylesheets="@../styles.css" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Gender">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="txtGender" maxWidth="1.7976931348623157E308" stylesheets="@../styles.css" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#Register" prefWidth="440.0" stylesheets="@../styles.css" text="REGISTER" />
+      <Hyperlink fx:id="btnSignin" onAction="#Back" stylesheets="@../styles.css" text="Already have an account? Sign in" />
+   </children>
+</VBox>
