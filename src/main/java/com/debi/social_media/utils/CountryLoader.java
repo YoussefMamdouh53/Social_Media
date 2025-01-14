@@ -15,7 +15,7 @@ public class CountryLoader
 {
     public static List<String> getCountries() {
         List<String> countries = new ArrayList<>();
-        File countriesFile = new File("countries.txt");
+        File countriesFile = new File("src/main/resources/com/debi/social_media/countries.txt");
         try {
             Scanner sc = new Scanner(countriesFile);
             while (sc.hasNextLine()) {
